@@ -1,0 +1,77 @@
+/* rtl.css */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .navbar-nav {
+    margin-right: 0 !important; 
+    padding-right: 0 !important;
+    justify-content: flex-end; 
+}
+
+[dir="rtl"] .nav-item {
+    margin-left: 0.5rem !important; 
+    margin-right: 0.5rem !important;
+}
+
+[dir="rtl"] .nav-link {
+    padding-right: 0.5rem !important; 
+    padding-left: 0.5rem !important;
+}
+
+[dir="rtl"] .dropdown-menu {
+    margin-right: -0.1875rem !important; 
+    margin-left: 0 !important;
+    text-align: right; 
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important; 
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ps-lg-5 {
+    padding-right: 3rem !important;
+    padding-left: 0 !important;
+}
+
+[dir="rtl"] .navbar-nav.ms-auto {
+    margin-left: auto !important; 
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-lg-12 {
+    margin-left: 3rem !important; 
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .front-background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+[dir="rtl"] .justify-content-start {
+    justify-content: flex-end !important; /* بدل justify-content: start */
+}
+
+[dir="rtl"] .info {
+    text-align: right !important; /* محاذاة النصوص لليمين */
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important; /* عكس margin-left: auto */
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .pe-5 {
+    padding-right: 0 !important;
+    padding-left: 3rem !important; /* عكس padding-end */
+}
+
+[dir="rtl"] .pe-3 {
+    padding-right: 0 !important;
+    padding-left: 1rem !important; /* عكس padding-end */
+}

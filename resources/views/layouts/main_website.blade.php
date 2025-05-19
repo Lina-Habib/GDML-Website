@@ -71,13 +71,26 @@
           </li> -->
 
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:#5f615d; font-weight: bold; " class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"  aria-expanded="false">
+            <a style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:#5f615d; font-weight: bold;" class="nav-link ps. System: nav-link ps-2 d-flex cursor-pointer align-items-center dropdown-toggle" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="material-icons opacity-6 me-2 text-md">draw</i>
               {{ __('messages.main.draw') }}
               <img src="{{ asset('imgs/down-arrow-dark.png') }}" alt="down-arrow" class="arrow ms-auto ms-md-2 d-lg-block d-none">
             </a>
             <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages8">
+              <!-- Big screen section-->
               <div class="d-none d-lg-block">
+                <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
+                  {{ __('messages.main.using') }}
+                </h6>
+                <a href="{{ URL('draw_2D') }}" class="dropdown-item border-radius-md">
+                  <span>{{ __('messages.main.2d') }}</span>
+                </a>
+                <a href="{{ URL('draw_3D') }}" class="dropdown-item border-radius-md">
+                  <span>{{ __('messages.main.3d') }}</span>
+                </a>
+              </div>
+              <!-- Mobile section-->
+              <div class="d-block d-lg-none">
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                   {{ __('messages.main.using') }}
                 </h6>
@@ -210,6 +223,14 @@
             localStorage.setItem('feedbacks', JSON.stringify(feedbackArray));
             renderFeedback();
         }
+
+        // show the dropdown menu in mobile
+        document.getElementById('dropdownMenuDocs').addEventListener('click', function (e) {
+          e.preventDefault();
+          const dropdown = this.nextElementSibling;
+          dropdown.classList.toggle('show');
+        });
+
     </script>
 
   <!---------FOOTER------------>

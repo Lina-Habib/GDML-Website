@@ -52,7 +52,7 @@
           <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
             <div class="card">
                 <a class="d-block blur-shadow-image" style="width: 100%; height: 100%; display: block;">
-                  <img src="{{ asset('imgs/bg3.jpg') }}" class="img-fluid" alt="img" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <img src="{{ asset('imgs/bg3.jpg') }}" class="img-fluid" alt="img" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy">
                 </a>
             </div>
           </div>

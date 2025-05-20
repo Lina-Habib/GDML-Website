@@ -28,7 +28,7 @@
   <!-- Navbar Transparent -->
   <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #f7ef97;">
     <div class="container">
-      <img style="height: 40px; width: 80px; border-radius: 45%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" src="{{ asset('imgs/logo2.jpg') }}" alt="logo">
+      <img style="height: 40px; width: 80px; border-radius: 45%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" src="{{ asset('imgs/logo2.jpg') }}" alt="logo" loading="lazy">
       <span style="margin-left: 5px;"></span>
       <a class="navbar-brand  text-dark " style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:black; font-weight: bold;" href="{{ url('home') }}" rel="tooltip" title="Designed and Coded by Basel Alherbawi" data-placement="bottom" >
         GDML
@@ -71,12 +71,11 @@
           </li> -->
 
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:#5f615d; font-weight: bold;" class="nav-link ps. System: nav-link ps-2 d-flex cursor-pointer align-items-center dropdown-toggle" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+            <a style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:#5f615d; font-weight: bold;gap: 5px;" class="nav-link ps. System: nav-link ps-2 d-flex cursor-pointer align-items-center dropdown-toggle" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false" >
               <i class="material-icons opacity-6 me-2 text-md">draw</i>
               {{ __('messages.main.draw') }}
-              <img src="{{ asset('imgs/down-arrow-dark.png') }}" alt="down-arrow" class="arrow ms-auto ms-md-2 d-lg-block d-none">
             </a>
-            <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages8">
+            <div class="dropdown-menu ms-n3 dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages8" style="margin-bottom: 0rem !important; padding-top: 0rem !important;">
               <!-- Big screen section-->
               <div class="d-none d-lg-block">
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
@@ -91,7 +90,7 @@
               </div>
               <!-- Mobile section-->
               <div class="d-block d-lg-none">
-                <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
+                <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1" style="margin-bottom: 0rem !important; padding-top: 0.2rem !important;">
                   {{ __('messages.main.using') }}
                 </h6>
                 <a href="{{ URL('draw_2D') }}" class="dropdown-item border-radius-md">
@@ -102,7 +101,6 @@
                 </a>
               </div>
             </div>
-
           </li>
 
           <li class="nav-item dropdown dropdown-hover mx-2">
@@ -240,7 +238,7 @@
         <div class="col-12">
           <div class="text-center" style="margin-top: 50px;">
             <a href="{{ url('home') }}">
-              <img style="height: 60px; width: 70px; border-radius: 45%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" src="{{ asset('imgs/logo2.jpg') }}"alt="main_logo">
+              <img style="height: 60px; width: 70px; border-radius: 45%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" src="{{ asset('imgs/logo2.jpg') }}"alt="main_logo" loading="lazy">
             </a>
             <h6 class="font-weight-bolder mb-4" style="margin-top: 10px;">GDML</h6>
           </div>

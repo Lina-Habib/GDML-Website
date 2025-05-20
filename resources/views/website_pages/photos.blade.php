@@ -214,7 +214,7 @@
         group.images.forEach(image => {
             const slide = document.createElement("div");
             slide.className = "swiper-slide";
-            slide.innerHTML = `<img src="${image}" alt="${group.name} image">`;
+            slide.innerHTML = `<img src="${image}" alt="${group.name} image" loading="lazy">`;
             swiperWrapper.appendChild(slide);
         });
 

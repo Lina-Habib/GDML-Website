@@ -1,33 +1,33 @@
 <!-- CSS for langs-->
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<link rel="stylesheet" href="{{ asset('css/app.css') }}" rel="preload">
 
 <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|family=Inter:300,400,500,600,700,900" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|family=Inter:300,400,500,600,700,900" rel="preload" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="preload">
   <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" rel="preload">
   <!-- Material Kit CSS -->
-  <link href="{{ asset('css/material-kit.css?v=3.0.0') }}" rel="stylesheet" />
+  <link href="{{ asset('css/material-kit.css?v=3.0.0') }}" rel="stylesheet" rel="preload" />
 
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" rel="preload" />
 
 <!-- Nucleo Icons -->
-<link href="{{ asset('css/nucleo-icons.css') }}" rel="stylesheet" />
-<link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/nucleo-icons.css') }}" rel="stylesheet" rel="preload" />
+<link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" rel="preload" />
 
 <!-- Font Awesome Icons -->
 <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="preload">
 
 <!-- Material Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="preload" />
 
 <!-- Download Swiper for image slider -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="preload" />
 
 <!-- Add Arabic font from Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" rel="preload">
 
 <!-- slider photos and videos styles -->
 <style>
@@ -84,7 +84,7 @@
 
 <!-- CSS Files -->
 
-<link id="pagestyle" href="{{ asset('css/material-kit.css?v=3.1.0') }}" rel="stylesheet" />
+<link id="pagestyle" href="{{ asset('css/material-kit.css?v=3.1.0') }}" rel="stylesheet" rel="preload" />
 
 <style type="text/css">
 

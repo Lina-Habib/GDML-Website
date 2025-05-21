@@ -4,6 +4,12 @@
 <head>
   <title>{{ __('messages.main.app_name') }}</title>
 
+  <meta name="keywords" content="تعلم الرياضيات التفاعلي، محاكاة هندسية ثلاثية الأبعاد، رسم المعادلات الرياضية، تعليم STEM، منصة تعليمية تفاعلية، محاكاة الأشكال الهندسية، تعلم الأشكال ثنائية الأبعاد، مختبر هندسي متنقل، تعليم الرياضيات للأطفال، تطبيقات تعليمية ذكية, Interactive math learning, 3D geometry simulation, Equation graphing tool, STEM education platform, Interactive educational platform, Geometric shape simulation, 2D shape learning, Mobile engineering lab, Math education for kids, Smart educational applications">
+
+
+  <meta name="description" content="منصة تفاعلية لتعلم الرياضيات والهندسة من خلال محاكاة ثنائية وثلاثية الأبعاد، تساعد الطلاب على فهم المعادلات والأشكال بطريقة ممتعة وعملية. Interactive platform for learning math and geometry through 2D and 3D simulations.">
+
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -236,7 +242,7 @@
     <div class="container">
       <div class=" row">
         <div class="col-12">
-          <div class="text-center" style="margin-top: 50px;">
+          <div class="text-center mx-auto" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;">
             <a href="{{ url('home') }}">
               <img style="height: 60px; width: 70px; border-radius: 45%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" src="{{ asset('imgs/logo2.jpg') }}"alt="main_logo" loading="lazy">
             </a>

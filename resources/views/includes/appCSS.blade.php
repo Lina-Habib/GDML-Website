@@ -12,6 +12,10 @@
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" rel="preload" />
 
+
+<!-- style for about us page -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 <!-- Nucleo Icons -->
 <link href="{{ asset('css/nucleo-icons.css') }}" rel="stylesheet" rel="preload" />
 <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" rel="preload" />

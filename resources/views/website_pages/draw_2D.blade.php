@@ -38,8 +38,8 @@
 
             <!-- Equation input -->
             <div id="equationInput" class="input-group input-group-dynamic mb-3">
-              <label class="form-label" style="font-size: 18px;">{{ __('messages.draw.write_equation_2D') }}</label>
-              <input type="text" class="form-control" id="equation" style="font-size: 18px;">
+              <label class="form-label" style="font-size: 18px;"></label>
+              <input type="text" class="form-control" id="equation" placeholder="{{ __('messages.draw.write_equation_2D') }}" style="font-size: 18px;">
             </div>
 
             <!-- Points input -->
@@ -67,6 +67,48 @@
         </div>
       </div>
     </section>
+
+    <h2 style="margin-bottom: 50px;">{{ __('messages.draw.address_img') }}</h2>
+
+    <div class="image-row">
+      <div class="image-container">
+          <img src="{{ asset('imgs/images/functions/abs.webp') }}" alt="absolute" style="margin-bottom: 10px;">
+          <p class="equation-select" data-equation="abs(x)">|x|</p>
+      </div>
+      <div class="image-container">
+          <img src="{{ asset('imgs/images/functions/constant.webp') }}" alt="constant" style="margin-bottom: 10px;">
+          <p class="equation-select" data-equation="3">C</p>
+      </div>
+      <div class="image-container">
+          <img src="{{ asset('imgs/images/functions/cubic.webp') }}" alt="cubic" style="margin-bottom: 10px;">
+          <p class="equation-select" data-equation="x^3">x³</p>
+      </div>
+      <div class="image-container">
+          <img src="{{ asset('imgs/images/functions/inverse.webp') }}" alt="inverse" style="margin-bottom: 10px;">
+          <p class="equation-select" data-equation="1/x">1/x</p>
+      </div>
+    </div>
+
+    <div class="image-row">
+        <div class="image-container">
+            <img src="{{ asset('imgs/images/functions/matching.webp') }}" alt="matching" style="margin-bottom: 10px;">
+            <p class="equation-select" data-equation="x">x</p>
+        </div>
+        <div class="image-container">
+            <img src="{{ asset('imgs/images/functions/quadratic.webp') }}" alt="quadratic" style="margin-bottom: 10px;">
+            <p class="equation-select" data-equation="x^2">x²</p>
+        </div>
+        <div class="image-container">
+            <img src="{{ asset('imgs/images/functions/square_root.webp') }}" alt="square root" style="margin-bottom: 10px;">
+            <p class="equation-select" data-equation="sqrt(x)">√x</p>
+        </div>
+        <div class="image-container">
+            <img src="{{ asset('imgs/images/functions/step.webp') }}" alt="step" style="margin-bottom: 10px;">
+            <p class="equation-select" data-equation="floor(x)">[x]</p>
+        </div>
+    </div>
+
+
   </div>
 
   <!-- JavaScript to handle equation or points plotting -->
@@ -245,7 +287,48 @@
         // document.getElementById("point-x").value = "";
         // document.getElementById("point-y").value = "";
       });
+
+      const equationInputField = document.getElementById("equation");
+          
+          // Save the original placeholder in a variable
+          const originalPlaceholder = equationInputField.getAttribute("placeholder");
+
+          equationInputField.addEventListener("input", function () {
+            if (this.value.trim() !== "") {
+              this.removeAttribute("placeholder");
+            } else {
+              this.setAttribute("placeholder", originalPlaceholder);
+            }
+      });
+
+      // Handle click on equation images to draw automatically
+      document.querySelectorAll(".equation-select").forEach(item => {
+        item.style.cursor = "pointer"; // The arrow changes shape when hovering.
+        item.addEventListener("click", () => {
+          const equation = item.getAttribute("data-equation");// Take the equation from the data attribute
+
+          // Ensure the user is in "Equation" mode and not "Points" mode.
+          document.getElementById("equationOption").checked = true;
+          document.getElementById("pointsOption").checked = false;
+          toggleInputs();// To show the equation box and hide the points box
+
+          // Fill the input box with the selected equation.
+          document.getElementById("equation").value = equation;
+
+          // Scroll to the plot
+          const plotSection = document.getElementById("plot");
+          if (plotSection) {
+            plotSection.scrollIntoView({ behavior: "smooth" }); // Pull the screen down
+          }
+
+          // Automatically execute the "draw" command
+          drawBtn.click();
+        });
+      });
+
     });
+
+
   </script>
 
 @stop

@@ -53,6 +53,7 @@ return [
         'y' => 'Enter value of y',
         'draw' => 'Draw the equation',
         'add' => 'Add the points',
+        'address_img' => 'Try practicing with other equations to see what they look like.',
         'Enter_equation' => 'Enter equation',
         'Invalid_equation' => 'Invalid equation: The expression cannot end with an operator (+, -, *, /)',
         'Invalid_formula' => 'Invalid formula: Invalid sequence of operands (e.g. ++, --, //)',
@@ -82,8 +83,6 @@ return [
         'address' => 'Our Story',
         'p1' => 'The story of this work began with a problem faced the founder of the site and owner of the invention that contributed to solve this problem spawned the application on this site, Mr. Basel Al-Harbawi.',
         'p2' => "One of Basel's neighbors asked him to  help his son's in Math subject-Geometry. Also another neighbor also spoke of the same problem, which also faced one of his sons. This is where the journey began.",
-        'p3' => 'Basel began teaching this subject of thwe Math, where was  used a pen, notebook, and other tools to try to convey the idea of the geometric problem so that students could attempt to solve it. He found a great response from the students by this method( Used objects to illustrate geometry-  Using objects to represent geometric shapes).While teaching these students, Basel discovered that they had a problem visualizing geometric shapes, and imagination as a whole, which is the foundation of innovation, creativity, and the pursuit of scientific and technological progress.',
-        'p4' => 'From here, the idea began to revolve around creating a tools that transforms shapes, objects, scientific systems, and anything that can be simulated into tangible forms that can be created and constructed.This led to the introduction of mathematical simulations through software, in addition to simulating them in real life using these tools, which can be simulated on this site.',
     ],
 
 

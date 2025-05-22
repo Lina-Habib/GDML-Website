@@ -345,5 +345,60 @@
         gap: 10px;
     }
 }
+
+/*  style for functions imgs in draw 2D*/
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 imgs on row in mobile */
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-items: center;
+    text-align: center;
+}
+.image-container {
+    text-align: center;
+}
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%;
+    /*height: auto;*/
+    min-width: 80px;
+}
+
+@media (min-width: 768px) {
+  .image-row {
+    grid-template-columns: repeat(4, 1fr); /* 4 imgs in row on the meduim and large screens */
+  }
+}
+
+
+#plot {
+    width: 100%;
+    height: 600px;
+  }
+
+  @media (max-width: 768px) {
+    #plot {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #plot {
+      height: 300px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #plot {
+      height: 700px;
+    }
+  }
+
 </style>
 

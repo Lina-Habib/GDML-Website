@@ -69,12 +69,12 @@
             </a>
           </li>
 
-          <!-- <li class="nav-item dropdown dropdown-hover mx-2">
+          <li class="nav-item dropdown dropdown-hover mx-2">
             <a href="{{ URL('examples') }}" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color: #5f615d; font-weight: bold; " class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"  aria-expanded="false">
               <i class="material-icons opacity-6 me-2 text-md">article</i>
-              Examples
+              {{ __('messages.main.examples') }}
             </a>
-          </li> -->
+          </li>
 
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:#5f615d; font-weight: bold;gap: 5px;" class="nav-link ps. System: nav-link ps-2 d-flex cursor-pointer align-items-center dropdown-toggle" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false" >

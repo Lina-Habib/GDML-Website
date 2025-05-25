@@ -42,6 +42,10 @@
               <input type="text" class="form-control" id="equation" placeholder="{{ __('messages.draw.write_equation_2D') }}" style="font-size: 18px;">
             </div>
 
+            <h5 id="equation-hint" style="margin-top: 40px;">
+              {{ __('messages.draw.findY') }}
+            </h5>
+
             <!-- Points input -->
             <div id="pointsInput" class="d-none">
               <div class="input-group input-group-dynamic mb-3">
@@ -100,7 +104,7 @@
         </div>
         <div class="image-container">
             <img src="{{ asset('imgs/images/functions/square_root.webp') }}" alt="square root" style="margin-bottom: 10px;">
-            <p class="equation-select" data-equation="sqrt(x)">√x</p>
+            <p class="equation-select" data-equation="sqrt(x)">x√</p>
         </div>
         <div class="image-container">
             <img src="{{ asset('imgs/images/functions/step.webp') }}" alt="step" style="margin-bottom: 10px;">
@@ -123,6 +127,7 @@
       const pointsInput = document.getElementById("pointsInput");
       const drawBtn = document.getElementById("draw-btn");
       const addPointBtn = document.getElementById("add-point-btn");
+      const equationHint = document.getElementById('equation-hint');
 
       function toggleInputs() {
         if (equationOption.checked) {
@@ -130,11 +135,13 @@
           pointsInput.classList.add("d-none");
           drawBtn.classList.remove("d-none");
           addPointBtn.classList.add("d-none");
+          equationHint.style.display = 'block';
         } else {
           equationInput.classList.add("d-none");
           pointsInput.classList.remove("d-none");
           drawBtn.classList.add("d-none");
           addPointBtn.classList.remove("d-none");
+          equationHint.style.display = 'none';
         }
       }
 

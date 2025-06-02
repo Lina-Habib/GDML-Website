@@ -65,15 +65,17 @@
 </script>
 
 <!-- Libraries for draw 2D page -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.0.0/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.0.0/math.js"></script>
 <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 
 <!----- darw 3D page ----->
 <!-- Add Plotly.js -->
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 <!-- Add math.js to Evaluate mathematical expressions safely-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.0.0/math.js" integrity="sha512-6NirKqWjDEM1u1i0g7pAMs3cxF2CrJgho3KVKBpEum0pNOp4NBNr0sQ1P6TsOus2hW3u2p3zC2LGb3e8eY1+0wg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 <!-- Download Swiper library -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

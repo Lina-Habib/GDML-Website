@@ -10,10 +10,12 @@ class DrawGraphController extends Controller
 {
     //
 
-    public function index_2D(){
+    public function index_2D_one(){
         App::setLocale('ar');
-        return view('website_pages.draw_2D');
+        return view('website_pages.draw_2D_oneEquation');
     }
+
+    
 
     public function index_3D(){
         App::setLocale('ar');

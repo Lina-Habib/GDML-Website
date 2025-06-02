@@ -3,7 +3,7 @@
 
 @section('content_body')
 
-  <div class="page-header min-vh-80" style="background-image: url({{ asset('imgs/bg.jpg') }})">
+  <div class="page-header min-vh-80" style="background-image: url({{ asset('imgs/bg6.jpg') }})">
     <span class="mask bg-gradient-dark opacity-6"></span>
     <div class="container">
       <div class="row">
@@ -99,14 +99,14 @@
     <div class="row align-items-center">
       <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
         <div class="rotating-card-container">
-          <div class="card card-rotate card-background card-background-mask-primary shadow-dark mt-md-0 mt-5">
-            <div class="front front-background" style="background-image: url({{ asset('imgs/objectives.jpg') }}); background-size: cover; background-position: center; background-repeat: no-repeat;">
+          <div class="card card-rotate card-background card-background-mask-primary shadow-dark mt-md-0 mt-5 mb-4 mb-md-5 mb-lg-0">
+            <div class="front front-background" style="background-image: url({{ asset('imgs/obj1.jpg') }}); background-size: cover; background-position: center; background-repeat: no-repeat;">
               <div class="card-body py-9 text-center">
                 <i class="material-symbols-rounded text-white text-4xl my-5">touch_app</i>
                 <h3 class="text-white">{{ __('messages.home.objectives') }}</h3>
               </div>
             </div>
-            <div class="back back-background" style="background-image: url({{ asset('imgs/objectives2.jpg') }}); background-size: cover;">
+            <div class="back back-background" style="background-image: url({{ asset('imgs/obj2.jpg') }}); background-size: cover; background-position: center; background-repeat: no-repeat;">
               <div class="card-body pt-9 text-center">
                 <h3 class="text-white">{{ __('messages.home.objectives') }}</h3>
               </div>

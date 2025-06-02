@@ -35,8 +35,8 @@
   <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #f7ef97;">
     <div class="container">
       <img style="height: 40px; width: 80px; border-radius: 45%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" src="{{ asset('imgs/logo2.jpg') }}" alt="logo" loading="lazy">
-      <span style="margin-left: 5px;"></span>
-      <a class="navbar-brand  text-dark " style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:black; font-weight: bold;" href="{{ url('home') }}" rel="tooltip" title="Designed and Coded by Basel Alherbawi" data-placement="bottom" >
+      <!-- <span style="margin-left: 5px;"></span> -->
+      <a class="navbar-brand  text-dark " style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:black; font-weight: bold;" href="{{ url('login') }}" rel="tooltip" title="Designed and Coded by Basel Alherbawi" data-placement="bottom" >
         GDML
       </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,73 +48,114 @@
       </button>
       <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
         <ul class="navbar-nav navbar-nav-hover ms-auto">
+          
+          <!-- Home -->
           <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-6">
-            <a  href="{{ URL('home') }}" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color: #5f615d; font-weight: bold;" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages2"  aria-expanded="false">
-              <i class="material-icons opacity-6 me-2 text-md">home</i>
+            <a href="{{ url('home') }}" class="nav-link nav-link-custom ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuHome" aria-expanded="false">
+              <i class="material-icons opacity-6 ms-1 text-md">home</i>
               {{ __('messages.main.home') }}
             </a>
           </li>
 
+          <!-- Photos -->
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a href="{{ URL('photos') }}" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color: #5f615d; font-weight: bold; " class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"  aria-expanded="false">
-              <i class="material-icons opacity-6 me-2 text-md">photo_library</i>
+            <a href="{{ url('photos') }}" class="nav-link nav-link-custom ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPhotos" aria-expanded="false">
+              <i class="material-icons opacity-6 ms-1 text-md">photo_library</i>
               {{ __('messages.main.photos') }}
             </a>
           </li>
 
+          <!-- Videos -->
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a href="{{ URL('videos') }}" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color: #5f615d; font-weight: bold; " class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" aria-expanded="false">
-              <i class="material-icons opacity-6 me-2 text-md">video_library</i>
+            <a href="{{ url('videos') }}" class="nav-link nav-link-custom ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuVideos" aria-expanded="false">
+              <i class="material-icons opacity-6 ms-1 text-md">video_library</i>
               {{ __('messages.main.videos') }}
             </a>
           </li>
 
+          <!-- Examples -->
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a href="{{ URL('examples') }}" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color: #5f615d; font-weight: bold; " class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"  aria-expanded="false">
-              <i class="material-icons opacity-6 me-2 text-md">article</i>
+            <a href="{{ url('examples') }}" class="nav-link nav-link-custom ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuVideos" aria-expanded="false">
+              <i class="material-icons opacity-6 ms-1 text-md">article</i>
               {{ __('messages.main.examples') }}
             </a>
           </li>
 
+
+          <!-- Draw with us -->
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color:#5f615d; font-weight: bold;gap: 5px;" class="nav-link ps. System: nav-link ps-2 d-flex cursor-pointer align-items-center dropdown-toggle" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false" >
-              <i class="material-icons opacity-6 me-2 text-md">draw</i>
+            <a class="nav-link nav-link-custom d-flex align-items-center dropdown-toggle" id="dropdownMenuDraw" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 ms-1 text-md">draw</i>
               {{ __('messages.main.draw') }}
             </a>
-            <div class="dropdown-menu ms-n3 dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages8" style="margin-bottom: 0rem !important; padding-top: 0rem !important;">
-              <!-- Big screen section-->
+
+
+            <div class="dropdown-menu ms-n3 dropdown-md p-2 border-radius-lg mt-n1" aria-labelledby="dropdownMenuDraw">
+              <!-- Common Header -->
+              <h6 class="dropdown-header text-dark font-semibold d-flex align-items-center px-1 pt-1">
+                {{ __('messages.main.using') }}
+              </h6>
+
+              <!-- Desktop Dropdown -->
               <div class="d-none d-lg-block">
-                <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
-                  {{ __('messages.main.using') }}
-                </h6>
-                <a href="{{ URL('draw_2D') }}" class="dropdown-item border-radius-md">
-                  <span>{{ __('messages.main.2d') }}</span>
-                </a>
-                <a href="{{ URL('draw_3D') }}" class="dropdown-item border-radius-md">
-                  <span>{{ __('messages.main.3d') }}</span>
-                </a>
+                <ul class="list-unstyled mb-0">
+                  <!-- submenu in 2D -->
+                  <li class="dropdown-submenu position-relative">
+                    <a class="dropdown-item border-radius-md d-flex justify-content-between align-items-center cursor-pointer">
+                      <span class="text-secondary">{{ __('messages.main.2d') }}</span>
+                      <i class="material-icons opacity-6 text-sm ms-1">chevron_left</i>
+                    </a>
+                    <ul class="dropdown-menu border-radius-lg">
+                      <li><a class="dropdown-item border-radius-md" href="{{ url('draw_2D/one_equation') }}">
+                      {{ __('messages.main.2d_oneEquation') }}</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="{{ url('draw_2D/two_equations') }}">
+                      {{ __('messages.main.2d_twoEquations') }}</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- 3D -->
+                  <li>
+                    <a href="{{ url('draw_3D') }}" class="dropdown-item border-radius-md">
+                      <span class="text-secondary">{{ __('messages.main.3d') }}</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <!-- Mobile section-->
+
+              <!-- Mobile Accordion -->
               <div class="d-block d-lg-none">
-                <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1" style="margin-bottom: 0rem !important; padding-top: 0.2rem !important;">
-                  {{ __('messages.main.using') }}
-                </h6>
-                <a href="{{ URL('draw_2D') }}" class="dropdown-item border-radius-md">
-                  <span>{{ __('messages.main.2d') }}</span>
-                </a>
-                <a href="{{ URL('draw_3D') }}" class="dropdown-item border-radius-md">
-                  <span>{{ __('messages.main.3d') }}</span>
+                <div class="accordion" id="accordion2DMenu">
+                  <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="heading2D">
+                      <button class="accordion-button collapsed p-2 bg-transparent text-secondary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2D" aria-expanded="false" aria-controls="collapse2D">
+                        {{ __('messages.main.2d') }}
+                        <i class="material-icons opacity-6 text-sm me-1">keyboard_arrow_down</i>
+                      </button>
+                    </h2>
+                    <div id="collapse2D" class="accordion-collapse collapse" aria-labelledby="heading2D" data-bs-parent="#accordion2DMenu">
+                      <div class="accordion-body py-1">
+                        <a href="{{ url('draw_2D/page1') }}" class="dropdown-item border-radius-md">صفحة 2D A</a>
+                        <a href="{{ url('draw_2D/page2') }}" class="dropdown-item border-radius-md">صفحة 2D B</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="{{ url('draw_3D') }}" class="dropdown-item border-radius-md mt-1">
+                  <span class="text-secondary">{{ __('messages.main.3d') }}</span>
                 </a>
               </div>
             </div>
           </li>
 
+          <!-- About Us -->
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a href="{{ URL('about_us') }}" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5); color: #5f615d; font-weight: bold; " class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs"  aria-expanded="false">
-              <i class="material-icons opacity-6 me-2 text-md">contact_page</i>
+            <a href="{{ url('about_us') }}" class="nav-link nav-link-custom ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuAbout" aria-expanded="false">
+              <i class="material-icons opacity-6 ms-1 text-md">contact_page</i>
               {{ __('messages.main.about') }}
             </a>
           </li>
+          
         </ul>
       </div>
 
@@ -299,6 +340,51 @@
   </footer>
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // منع إغلاق القائمة المنسدلة عند النقر على الأكورديون
+    document.querySelectorAll('#accordion2DMenu .accordion-button').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    });
+
+    // دعم hover للقائمة الفرعية
+    document.querySelectorAll('.dropdown-submenu').forEach((submenu, index) => {
+      submenu.addEventListener('mouseenter', function () {
+        const dropdownMenu = this.querySelector('.dropdown-menu');
+        if (dropdownMenu) {
+          dropdownMenu.classList.add('show');
+          dropdownMenu.style.setProperty('right', '100%', 'important');
+          dropdownMenu.style.setProperty('left', 'auto', 'important');
+          // فحص حالة العرض
+          const computedStyle = window.getComputedStyle(dropdownMenu);
+          console.log(`Submenu ${index} shown:`, {
+            left: computedStyle.left,
+            right: computedStyle.right,
+            display: computedStyle.display
+          });
+          if (computedStyle.display === 'none') {
+            console.warn(`Submenu ${index} is hidden despite show class`);
+          }
+        } else {
+          console.error(`Dropdown menu not found in submenu ${index}`, submenu);
+        }
+      });
+      submenu.addEventListener('mouseleave', function () {
+        const dropdownMenu = this.querySelector('.dropdown-menu');
+        if (dropdownMenu) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
+    });
+
+    // فحص إعدادات RTL
+    if (!document.documentElement.getAttribute('dir')) {
+      console.warn('HTML element does not have dir attribute. Consider adding dir="rtl" for proper submenu positioning.');
+    }
+  });
+</script>
 
 </body>
 

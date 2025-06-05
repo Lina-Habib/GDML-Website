@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+Auth::routes();
+
 
 // Route::get('/', function () {
 //     return view('about-us');
@@ -19,7 +21,6 @@ Route::get('draw_3D','App\Http\Controllers\Website\DrawGraphController@index_3D'
 Route::get('about_us','App\Http\Controllers\Website\AboutUsController@index');
 
 
-Route::get('login', 'App\Http\Controllers\Auth\LoginController@showLoginForm');
 
 Route::get('language/{locale}', [App\Http\Controllers\LanguageController::class, 'change'])->name('language.change');
 
@@ -32,3 +33,14 @@ Route::get('lang/{locale}', function ($locale) {
     Session::put('locale', $locale);
     return redirect()->back();
 })->name('switch.lang');
+
+
+Route::get('/login', 'App\Http\Controllers\HomeController@index')->name('login');
+Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login')->name('login');
+Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+Route::get('/dashboard', 'App\Http\Controllers\Dashboard\MainController@index')->name('dashboard')->middleware('auth');
+
+
+
+
+// Route::get('/login', [App\Http\Controllers\HomeController::class, 'index'])->name('login');

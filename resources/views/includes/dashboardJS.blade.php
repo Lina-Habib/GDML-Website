@@ -2,14 +2,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.querySelector('.main-content');
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+                mainContent.classList.remove('active');
+            } else {
+                sidebar.classList.add('active');
+                mainContent.classList.add('active');
+            }
+        });
+
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
-            const mainContent = document.getElementById('main-content');
-            sidebar.classList.toggle('collapsed');
+            const mainContent = document.querySelector('.main-content');
             sidebar.classList.toggle('active');
-            mainContent.classList.toggle('collapsed');
             mainContent.classList.toggle('active');
-            console.log('Sidebar toggled:', sidebar.classList.contains('collapsed')); // للتصحيح
         }
 
         function toggleDarkMode() {
@@ -20,21 +29,16 @@
         }
 
         // Set sidebar state based on screen size
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', () => {
             const sidebar = document.getElementById('sidebar');
-            const mainContent = document.getElementById('main-content');
+            const mainContent = document.querySelector('.main-content');
             if (window.innerWidth <= 768) {
-                sidebar.classList.add('collapsed');
                 sidebar.classList.remove('active');
-                mainContent.classList.add('collapsed');
-                mainContent.classList.toggle('active');
+                mainContent.classList.remove('active');
             } else {
-                sidebar.classList.remove('collapsed');
                 sidebar.classList.add('active');
-                mainContent.classList.remove('collapsed');
+                mainContent.classList.add('active');
             }
         });
 
-        // Trigger resize event on page load to apply initial state
-        window.dispatchEvent(new Event('resize'));
     </script>

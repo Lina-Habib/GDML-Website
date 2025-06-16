@@ -4,13 +4,18 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Card;
+use App\Models\Feedback;
+
 
 class MainController extends Controller
 {
     //
 
     public function index(){
-        return view('dashboard_pages.main');
+        $cardCount = Card::count(); // fetch count of cards
+        $feedbacks = Feedback::count();
+        return view('dashboard_pages.main', compact('cardCount', 'feedbacks'));
     }
 
 }

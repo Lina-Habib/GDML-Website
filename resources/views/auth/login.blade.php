@@ -44,7 +44,7 @@
             </div>
 
             <div class="flex justify-between items-center mb-3">
-                <a href="#" class="text-sm text-blue-600 hover:underline">{{ __('auth.forgot') }}</a>
+                <!-- <a href="#" class="text-sm text-blue-600 hover:underline">{{ __('auth.forgot') }}</a> -->
             </div>
 
             <button type="submit"

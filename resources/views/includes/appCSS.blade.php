@@ -185,131 +185,98 @@
 
 <style>
     /* Popup window format */
-        .feedback-popup {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            display: none;
-            z-index: 1000;
-            transition: transform 0.3s ease-in-out;
-            transform: translateY(100%);
-        }
+    .feedback-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 90%;
+        max-width: 500px;
+    }
 
-        .feedback-popup.active {
-            display: block;
-            transform: translateY(0);
-        }
+    .feedback-popup.active {
+        display: block;
+    }
 
-        .feedback-popup h3 {
-            margin: 0 0 10px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .feedback-popup input, .feedback-popup textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .feedback-popup textarea {
-            height: 80px;
-            resize: none;
-        }
-
-        .feedback-popup .buttons {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .feedback-popup button {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .feedback-popup .submit-btn {
-            background: #28a745;
-            color: #fff;
-        }
-
-        .feedback-popup .close-btn {
-            background: #dc3545;
-            color: #fff;
-        }
-
-        .feedback-popup .delete-btn {
-            background: #dc3545;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-
-        /* Comments section */
-        .feedback-list {
-            max-height: 150px;
-            overflow-y: auto;
-            margin-top: 10px;
-            border-top: 1px solid #ddd;
-            padding-top: 10px;
-        }
-
-        .feedback-item {
-            background: #f8f9fa;
-            padding: 8px;
-            margin-bottom: 8px;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-
-        .feedback-item p {
-            margin: 0;
-        }
-
-        .feedback-item .name {
-            font-weight: bold;
-            color: #333;
-        }
-
-        .feedback-item .date {
-            font-size: 0.8em;
-            color: #666;
-        }
-
-    /* Open window button */
-        .open-feedback-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #f7ef97;
-            color: black;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-        }
-
-    /* Responsive format */
-        @media (max-width: 400px) {
-            .feedback-popup {
-                width: 90%;
-                right: 5%;
-            }
-        }
+    .open-feedback-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: background 0.3s ease;
+    }
+    .open-feedback-btn:hover {
+        background: #357abd;
+    }
+    /* تنسيق المدخلات داخل البوب-أب */
+    .feedback-popup input[type="text"],
+    .feedback-popup input[type="email"],
+    .feedback-popup textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        direction: rtl;
+        box-sizing: border-box;
+    }
+    .feedback-popup textarea {
+        height: 100px;
+        resize: vertical;
+    }
+    .feedback-popup input:focus,
+    .feedback-popup textarea:focus {
+        border-color: #4a90e2;
+        outline: none;
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+    }
+     /* تنسيق الأزرار */
+    .feedback-popup .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .feedback-popup .submit-btn,
+    .feedback-popup .close-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .feedback-popup .submit-btn {
+        background-color: #4a90e2;
+        color: white;
+    }
+    .feedback-popup .submit-btn:hover {
+        background-color: #357abd;
+        transform: translateY(-2px);
+    }
+    .feedback-popup .close-btn {
+        background-color: #f44336;
+        color: white;
+    }
+    .feedback-popup .close-btn:hover {
+        background-color: #da190b;
+        transform: translateY(-2px);
+    }
 </style>
 
 

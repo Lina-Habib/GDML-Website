@@ -6,7 +6,7 @@ return [
         'home' => 'Home',
         'photos' => 'Photos',
         'videos' => 'Videos',
-        'examples' => 'Examples',
+        'learn' => 'Learn with us',
         'draw' => 'Draw with us',
         'using' => 'Using',
         '2d' => '2D',
@@ -85,7 +85,7 @@ return [
         'err_video' => 'Your browser does not support the video tag.',
     ],
 
-    'examples' =>[
+    'learn' =>[
         'domain' => 'Domain',
         'range' => 'Range',
         'try' => 'Try',

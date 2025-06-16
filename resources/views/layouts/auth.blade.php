@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-  <title>{{ __('messages.main.app_name') }}</title>
+  <title>{{ __('auth.title') }}</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />

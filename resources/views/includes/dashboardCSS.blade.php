@@ -152,11 +152,11 @@
             background-color: #4b5563;
         }
 
-        body.dark-mode .sidebar a {
+        body.dark-mode .sidebar a .sidebar button{
             color: #d1d5db;
         }
 
-        body.dark-mode .sidebar a:hover {
+        body.dark-mode .sidebar a .sidebar button:hover {
             background-color: #6b7280;
         }
 

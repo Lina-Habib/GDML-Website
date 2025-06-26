@@ -1,4 +1,4 @@
-*
-!.gitignore
+/storage/*
 !storage/app/public/images/
 !storage/app/public/videos/
+!storage/app/public/cards/
